@@ -19,6 +19,12 @@ According to [wikipedia](http://en.wikipedia.org/wiki/Nash_equilibrium
 
 
 The NE for the decider is based on:
+
 1. Similarity of user-drawn system with benchmarked system 
+ 
 2. Mean percentage deviation of benchmarked system against references
+ 
 3. Complexity of method (combination of basis set, functionals, and system)
+
+
+
