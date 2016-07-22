@@ -9,4 +9,8 @@ A web app that uses game theory to select the optimal density functional and bas
 TODO: Needs to be imported from BitBucket.org
 
 
-The Decider receives input from user-drawn molecules, and user-chosen parameters, and then calculates Nash Equilibria (NE).  The results are then shown to the user, so they can make a more informed choice.
+The Decider receives input from user-drawn molecules, and user-chosen parameters, and then calculates Nash Equilibria (NE).  The results 
+are then shown to the user, so they can make a more informed choice.
+
+According to [wikipedia](http://en.wikipedia.org/wiki/Nash_equilibrium
+), Nash Equilibrium is “a solution concept of a non-cooperative game involving two or more players, in which…no player can benefit by changing strategies while the other players keep theirs unchanged”
