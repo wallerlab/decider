@@ -52,7 +52,9 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
-		test 'cglib:cglib-nodep:2.2.2'
+	test 'cglib:cglib-nodep:2.2.2'
+	compile group: 'org.openscience.cdk', name: 'cdk-standard', version: '1.5.10'
+
     }
 
     plugins {
