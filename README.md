@@ -1,4 +1,4 @@
-# The Decider
+#   *[`The Decider`](http://decider.wallerlab.org)*
 [![Build Status](https://travis-ci.org/wallerlab/decider.svg?branch=master)](https://travis-ci.org/wallerlab/decider)
 [![Coverage Status](https://coveralls.io/repos/github/wallerlab/decider/badge.svg?branch=master)](https://coveralls.io/github/wallerlab/decider?branch=master)
 
