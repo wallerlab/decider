@@ -1,0 +1,14 @@
+NFG 1 R "test game" { "Param 1" "Param 2" }
+ 
+{ 
+{ "Player1 choice1" "Player1 choice2"  }
+{ "Player2 choice1" "Player2 choice2"  }
+ }
+""
+
+{ 
+{ "" 1, 1 }
+{ "" 0, 0 }
+{ "" 0, 0 }
+{ "" 1, 1 }
+ }

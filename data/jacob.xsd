@@ -1,0 +1,137 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Jacob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Benchmark">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute type="xs:string" name="Name"/>
+                <xs:attribute type="xs:string" name="ReferenceArticle"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dataset">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="System" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Molecules">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Molecule" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="atomArray">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="atom" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="id" use="optional"/>
+                                              <xs:attribute type="xs:string" name="elementType" use="optional"/>
+                                              <xs:attribute type="xs:float" name="x3" use="optional"/>
+                                              <xs:attribute type="xs:float" name="y3" use="optional"/>
+                                              <xs:attribute type="xs:float" name="z3" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="bondArray">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="bond" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="atomRefs2" use="optional"/>
+                                              <xs:attribute type="xs:byte" name="order" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="SmileString" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Methods">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Method" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Result">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:float" name="CalculatedValue" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Hamiltonian" use="optional"/>
+                              <xs:attribute type="xs:string" name="CategoryOfHamiltonian" use="optional"/>
+                              <xs:attribute type="xs:string" name="Basis" use="optional"/>
+                              <xs:attribute type="xs:string" name="CategoryOfBasis" use="optional"/>
+                              <xs:attribute type="xs:string" name="CounterpoiseCorrection" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ReferenceResult">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ReferenceMethod">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Hamiltonian" use="optional"/>
+                                  <xs:attribute type="xs:string" name="CategoryOfHamiltonian" use="optional"/>
+                                  <xs:attribute type="xs:string" name="Basis" use="optional"/>
+                                  <xs:attribute type="xs:string" name="CategoryOfBasis" use="optional"/>
+                                  <xs:attribute type="xs:string" name="CounterpoiseCorrection" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="ReferenceValue">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:float" name="Value" use="optional"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Name" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="Name"/>
+            <xs:attribute type="xs:string" name="ReferenceArticle"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:float" name="Version"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
