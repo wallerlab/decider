@@ -5,7 +5,7 @@
 
 A web app that uses game theory to select the optimal density functional and basis set combination.
 
-![decider](https://cloud.githubusercontent.com/assets/13583117/17089684/a90d1d3c-525b-11e6-9049-0ffe928be49e.png)
+![decider_small](https://cloud.githubusercontent.com/assets/13583117/17089727/102a6ff6-525c-11e6-87d2-2c1bbe77ab4b.png)
 
 The Decider receives input from user-drawn molecules, and user-chosen parameters, and then calculates Nash Equilibria (NE).  The results 
 are then shown to the user, so they can make a more informed choice.
