@@ -60,6 +60,8 @@ grails.project.dependency.resolution = {
        compile group: 'org.openscience.cdk', name: 'cdk-pdb', version: '1.5.13'
        compile group: 'org.openscience.cdk', name: 'cdk-silent', version: '1.5.13'
        compile group: 'org.openscience.cdk', name: 'cdk-io', version: '1.5.13'
+              compile group: 'org.openscience.cdk', name: 'cdk-fingerprint', version: '1.5.13'
+
     }
 
     plugins {
