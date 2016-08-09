@@ -54,6 +54,9 @@ grails.project.dependency.resolution = {
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
 	test 'cglib:cglib-nodep:2.2.2'
 	compile group: 'org.openscience.cdk', name: 'cdk-core', version: '1.5.13'
+	compile group: 'org.openscience.cdk', name: 'cdk-standard', version: '1.5.13'
+        compile group: 'org.openscience.cdk', name: 'cdk-interfaces', version: '1.5.13'
+
 
     }
 
