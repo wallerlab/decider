@@ -56,6 +56,7 @@ grails.project.dependency.resolution = {
 	compile group: 'org.openscience.cdk', name: 'cdk-core', version: '1.5.13'
 	compile group: 'org.openscience.cdk', name: 'cdk-standard', version: '1.5.13'
         compile group: 'org.openscience.cdk', name: 'cdk-interfaces', version: '1.5.13'
+      compile group: 'org.openscience.cdk', name: 'cdk-smiles', version: '1.5.13'
 
 
     }
