@@ -10,7 +10,6 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 
-sudo: true
 
 install: echo "skip 'gradle assemble' step in $PWD"
 script:
