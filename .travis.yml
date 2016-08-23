@@ -14,6 +14,6 @@ sudo: true
 
 install: echo "skip 'gradle assemble' step"
 script:
-   -  wget https://sourceforge.net/projects/gambit/files/gambit16/16.0.0/gambit-16.0.0.tar.gz /gambit-16.0.0.tar.gz && gunzip  gambit-16.0.0.tar.gz && tar -xvf gambit-16.0.0.tar
+   -  wget https://sourceforge.net/projects/gambit/files/gambit16/16.0.0/gambit-16.0.0.tar.gz  && gunzip  gambit-16.0.0.tar.gz && tar -xvf gambit-16.0.0.tar
    - cd gambit-16.0.0 && ./configure --prefix=$PWD/gambit && make &&  make install
    - ./grailsw clean && ./grailsw refresh-dependencies && ./grailsw test-app
