@@ -3,6 +3,7 @@ package theDecider.gameTheory.gambit
 import grails.test.mixin.TestMixin
 import grails.test.mixin.support.GrailsUnitTestMixin
 import spock.lang.Specification
+import spock.lang.Ignore
 
 /**
  * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
@@ -16,7 +17,7 @@ class GambitManagerSpec extends Specification {
 
     def cleanup() {
     }
-	
+	@Ignore
 	void "test createDirectory creates the working directory"(){
 		when:
 		gm.mainFolder = new File("decider-workspace")

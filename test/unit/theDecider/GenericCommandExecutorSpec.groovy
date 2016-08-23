@@ -15,7 +15,7 @@ class GenericCommandExecutorSpec extends Specification {
 	
 	void "test that execute executes a gambit command"() {
 		setup:
-		String gambitPure = System.getenv("gambit-enumpure")
+		String gambitPure = System.getenv("gambit_enumpure")
 		
 		when:
 		String output = cmdExec.execute(gambitPure + " testInput.nfg",
@@ -27,7 +27,7 @@ class GenericCommandExecutorSpec extends Specification {
 	
 	void "test that execute executes a gambit command with more than 1 Nash Equilibrium"() {
 		setup:
-		String gambitPure = System.getenv("gambit-enumpure")
+		String gambitPure = System.getenv("gambit_enumpure")
 		
 		when:
 		String output = cmdExec.execute(gambitPure + " testInput2.nfg",

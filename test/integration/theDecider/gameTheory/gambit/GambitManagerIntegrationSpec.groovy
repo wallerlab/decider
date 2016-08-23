@@ -21,7 +21,7 @@ class GambitManagerIntegrationSpec extends Specification {
 		gameTheoryManager.inputFileCreator = Mock(InputFileCreator)
 		gameTheoryManager.outputParser = Mock(OutputParser)
 		gameTheoryManager.commandExecutor = Mock(CommandExecutor)
-		gameTheoryManager.gambitPure = "/Applications/Gambit.app/Contents/MacOS/gambit-enumpure"
+		gameTheoryManager.gambitPure = System.getenv("gambit_enumpure")
 		gameTheoryManager.commandExecutor.execute(_,_) >> 'NE,1,0,1,0NE,0,1,0,1'
 		NDimensionalMatrix dmx = Mock()
 		dmx.matrix >> [["Player1 choice1", "Player1 choice2"],
@@ -29,7 +29,8 @@ class GambitManagerIntegrationSpec extends Specification {
 		gameTheoryManager.outputParser.parseOutput(_,_) >> dmx
 		gameTheoryManager.mainFolder = new File("test/Test_Folder/")
     }
-	
+
+	@Ignore	
     void "test that findNashEquilibria finds Nash Equilibria"() {
 		setup:
 		def payoffs = ["basis sets":[["def2-QZVP", "SVP", "TZVP"], 
