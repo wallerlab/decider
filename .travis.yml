@@ -17,3 +17,4 @@ script:
    - cd gambit-16.0.0 && ./configure --prefix=$PWD/gambit && make &&  make install && cd ..
    - ./grailsw clean && ./grailsw refresh-dependencies && ./grailsw test-app -coverage -xml
    - ./grailsw coveralls
+   - ./grailsw prod war decider.war
