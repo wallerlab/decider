@@ -1,4 +1,6 @@
 #   *[`The Decider`](http://decider.wallerlab.org)*
+
+[![Join the chat at https://gitter.im/wallerlab/decider](https://badges.gitter.im/wallerlab/decider.svg)](https://gitter.im/wallerlab/decider?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Apache License](http://img.shields.io/badge/license-APACHE2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/wallerlab/decider.svg?branch=master)](https://travis-ci.org/wallerlab/decider)
 [![Coverage Status](https://coveralls.io/repos/github/wallerlab/decider/badge.svg?branch=master)](https://coveralls.io/github/wallerlab/decider?branch=master)
