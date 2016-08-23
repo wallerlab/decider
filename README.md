@@ -1,5 +1,5 @@
 #   *[`The Decider`](http://decider.wallerlab.org)*
-[ ![Download](https://api.bintray.com/packages/wallerlab/decider/decider/images/download.svg) ](https://bintray.com/wallerlab/release-candidates/decider/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/wallerlab/release-candidates/decider/images/download.svg) ](https://bintray.com/wallerlab/release-candidates/decider/_latestVersion)
 [![Apache License](http://img.shields.io/badge/license-APACHE2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/wallerlab/decider.svg?branch=master)](https://travis-ci.org/wallerlab/decider)
 [![Coverage Status](https://coveralls.io/repos/github/wallerlab/decider/badge.svg?branch=master)](https://coveralls.io/github/wallerlab/decider?branch=master)
