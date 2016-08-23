@@ -81,6 +81,9 @@ grails.project.dependency.resolution = {
                 test(':code-coverage:2.0.3-3') {
                     export = false
                 }
+                
+                build ":codenarc:0.25.2"
+
 
         compile ":asset-pipeline:1.8.11"
 		compile ":spring-security-core:2.0-RC4"
