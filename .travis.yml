@@ -17,7 +17,7 @@ script:
 - ./grailsw clean && ./grailsw refresh-dependencies && ./grailsw test-app -coverage
   -xml
 - ./grailsw coveralls
-- ./grailsw prod war decider.war
+- ./grailsw prod war decider.0.0.1.war
 -./curl -T *.war -umpwaller:BINTRAY_KEY https://api.bintray.com/content/wallerlab/decider/decider/0.0.1/
 env:
   global:
