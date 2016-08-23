@@ -4,19 +4,18 @@ import grails.test.mixin.TestMixin
 import grails.test.mixin.support.GrailsUnitTestMixin
 import spock.lang.Specification
 import theDecider.GenericCommandExecutor;
-import spock.lang.Ignore
+
 /**
  * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
  */
 @TestMixin(GrailsUnitTestMixin)
-@Ignore
 class GenericCommandExecutorSpec extends Specification {
 	
 	GenericCommandExecutor cmdExec = new GenericCommandExecutor()
 	
 	void "test that execute executes a gambit command"() {
 		setup:
-		String gambitPure = System.getenv("gambit-enumpure")
+		String gambitPure = System.getenv("gambit_enumpure")
 		
 		when:
 		String output = cmdExec.execute(gambitPure + " testInput.nfg",
@@ -28,7 +27,7 @@ class GenericCommandExecutorSpec extends Specification {
 	
 	void "test that execute executes a gambit command with more than 1 Nash Equilibrium"() {
 		setup:
-		String gambitPure = System.getenv("gambit-enumpure")
+		String gambitPure = System.getenv("gambit_enumpure")
 		
 		when:
 		String output = cmdExec.execute(gambitPure + " testInput2.nfg",
