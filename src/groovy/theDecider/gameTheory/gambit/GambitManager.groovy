@@ -45,8 +45,8 @@ class GambitManager implements GameTheoryManager{
 		File directory = createDirectory(smiles)
 		
 		inputFileCreator.createFile(directory, payoffs)
-		prtinln "**** gambitPure is ${gambitPure} "
-		prtinln "**** directory is ${directory} "
+		prtinln """%%%%% gambitPure is ${gambitPure} """
+		prtinln """$$$$ directory is ${directory} """
 		String gambitOutput = commandExecutor.execute(
 			gambitPure + " input.nfg", directory)
 		Matrix strategies = outputParser.parseOutput(
