@@ -19,7 +19,7 @@ script:
 - ./grailsw codenarc  
 - ./grailsw coveralls
 - ./grailsw prod war decider.0.0.1.war
-- ./curl -T decider.0.0.1.war -umpwaller:$BINTRAY_KEY https://api.bintray.com/content/wallerlab/decider/decider/0.0.1/decider.0.0.1.war
+-  curl -T decider.0.0.1.war -umpwaller:$BINTRAY_KEY https://api.bintray.com/content/wallerlab/decider/decider/0.0.1/decider.0.0.1.war
 env:
   global:
     secure: PLfUOmHeeioRUxBsdT6s1e6R8i4DZuVGhO3wCah5WN1mnezHY3h685MSFcJ36YN3t4p9qG6i1b3ziuB3098UM+sDHhrlbUo8zlOTRQ5PZ9swsYMYj/tbwG7m1SZzreZKkv9z9zqPxwQ6fZJ2/8+dIRsEllwj7/XWU0eomT67nBPTM0RI9R5Vzxrm2vi+cqw7cpBOZdYUY9BCVQbOqpqLpRs5YNMr2LGaGkKGp76T9ukqSrB2QlylyLyPpF/3IhRYp+6BwcfZQsr2uMLjYjdSxkDk2Bp0oc0wlk4SXg7YUxbEZuULGeLhpyY1mZJZT6ZHRBZNwpTmnj2FX7MxyEbJ57FKJqP35WBfT0vraE/JZ8RpXkWSSzl3MDkt7PnnrtTE/C3H7dzHcSVh5PudMnbfO4HRAQosw+YTRKE5Y64HoP1lELv7eKoLFeuWTa32Ic/4N/VqdRRrZcqGPaC0SLF1ffduOf7xpAN4xBoxq85bkODtexgxx4WbHb5DBCY5BlEbMP+3Nwqvzd/wQoLjqqUtUDaRQh/PK100WxHP9MjDVCH8OIsofcrO9Sw21W3vT5EfTcOWUp849oIDNl9t1kv3BKpXglOHR5Icdif4RBIwSF0RjkDuiDpM9N1KPD3oXCSv6hadGZ5vB/XFeJqVwJCEHVmqncJ7Y3r9tWmdZ8w934o=
