@@ -45,10 +45,10 @@ class GambitManager implements GameTheoryManager{
 		File directory = createDirectory(smiles)
 		
 		inputFileCreator.createFile(directory, payoffs)
-		prtinln "%%%%% gambitPure is: "
-		prtinln gambitPure
+		println  "%%%%% gambitPure is: "
+		println gambitPure
 
-		prtinln "%%%%% directory is: "
+		println "%%%%% directory is: "
 		println directory
 		String gambitOutput = commandExecutor.execute(
 			gambitPure + " input.nfg", directory)
