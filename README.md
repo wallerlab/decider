@@ -1,9 +1,13 @@
-#   *[`The Decider`](http://decider.wallerlab.org)*
+#   *[`The Decider`](http://decider.wallerlab.org)* The right functional for the right reason
 [![Apache License](http://img.shields.io/badge/license-APACHE2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/wallerlab/decider.svg?branch=master)](https://travis-ci.org/wallerlab/decider)
 [![Coverage Status](https://coveralls.io/repos/github/wallerlab/decider/badge.svg?branch=master)](https://coveralls.io/github/wallerlab/decider?branch=master)
 
 A web app that uses game theory to select the optimal density functional and basis set combination.
+
+We are plagued by a swarm of density functionals, so we use game theory to quickly select a functional for a given problem.
+This is less subjective and can be systematically improved by improving/enlarging the training and validation sets.
+
 
 ![decider_small](https://cloud.githubusercontent.com/assets/13583117/17089727/102a6ff6-525c-11e6-87d2-2c1bbe77ab4b.png)
 
@@ -26,5 +30,6 @@ The NE for the decider is based on:
  
 3. Complexity of method (combination of basis set, functionals, and system)
 
+Keywords: Game theory · Nash Equilibrium · Benchmarking · Decision support
 
 
