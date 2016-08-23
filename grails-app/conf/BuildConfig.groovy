@@ -61,6 +61,9 @@ grails.project.dependency.resolution = {
        compile group: 'org.openscience.cdk', name: 'cdk-silent', version: '1.5.13'
        compile group: 'org.openscience.cdk', name: 'cdk-io', version: '1.5.13'
        compile group: 'org.openscience.cdk', name: 'cdk-fingerprint', version: '1.5.13'
+         build 'org.apache.httpcomponents:httpcore:4.3.2'
+                build 'org.apache.httpcomponents:httpclient:4.3.2'
+                build 'org.apache.httpcomponents:httpmime:4.3.3'
     }
 
     plugins {
@@ -70,6 +73,14 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.7'
+
+   // Coveralls plugin
+                build(':coveralls:0.1.4', ':rest-client-builder:1.0.3') {
+                    export = false
+                }
+                test(':code-coverage:2.0.3-3') {
+                    export = false
+                }
 
         compile ":asset-pipeline:1.8.11"
 		compile ":spring-security-core:2.0-RC4"
@@ -89,25 +100,4 @@ grails.project.dependency.resolution = {
     }
 }
 
-grails.project.dependency.resolution = {
-        inherits("global") { }
-        log "info"
-        repositories {
-                //your repositories
-        }
-        dependencies {
-                // Latest httpcore and httpmime for Coveralls plugin
-                build 'org.apache.httpcomponents:httpcore:4.3.2'
-                build 'org.apache.httpcomponents:httpclient:4.3.2'
-                build 'org.apache.httpcomponents:httpmime:4.3.3'
-        }
-        plugins {
-                // Coveralls plugin
-                build(':coveralls:0.1.4', ':rest-client-builder:1.0.3') {
-                    export = false
-                }
-                test(':code-coverage:2.0.3-3') {
-                    export = false
-                }
-        }
-}
+
