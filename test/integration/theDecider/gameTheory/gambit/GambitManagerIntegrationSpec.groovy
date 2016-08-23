@@ -29,7 +29,8 @@ class GambitManagerIntegrationSpec extends Specification {
 		gameTheoryManager.outputParser.parseOutput(_,_) >> dmx
 		gameTheoryManager.mainFolder = new File("test/Test_Folder/")
     }
-	
+
+	@Ignore	
     void "test that findNashEquilibria finds Nash Equilibria"() {
 		setup:
 		def payoffs = ["basis sets":[["def2-QZVP", "SVP", "TZVP"], 
