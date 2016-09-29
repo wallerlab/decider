@@ -1,4 +1,5 @@
 #   *[`The Decider`](http://decider.wallerlab.org)*
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.wallerlab/decider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.wallerlab/decider)
 [ ![Download](https://api.bintray.com/packages/wallerlab/release-candidates/decider/images/download.svg) ](https://bintray.com/wallerlab/release-candidates/decider/_latestVersion)
 [![Apache License](http://img.shields.io/badge/license-APACHE2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/wallerlab/decider.svg?branch=master)](https://travis-ci.org/wallerlab/decider)
