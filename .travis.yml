@@ -10,8 +10,6 @@ cache:
   - $HOME/.gradle/wrapper/
 install: echo "skip 'gradle assemble' step in $PWD"
 script:
-- sudo apt-get update
-- sudo apt-get install openbabel
 - wget https://sourceforge.net/projects/gambit/files/gambit16/16.0.0/gambit-16.0.0.tar.gz  &&
   gunzip  gambit-16.0.0.tar.gz && tar -xvf gambit-16.0.0.tar
 - cd gambit-16.0.0 && ./configure --prefix=$PWD/gambit && make &&  make install &&
