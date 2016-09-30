@@ -29,6 +29,10 @@ The NE for the decider is based on:
  
 3. Complexity of method (combination of basis set, functionals, and system)
 
+# Documentation
+[javadoc](http://wallerlab.github.io/decider/latest-javadoc)
+
+
 # Slides
 [![Slides](https://cloud.githubusercontent.com/assets/13583117/18926096/c12382c4-85b6-11e6-98fa-795e51235e83.png)](http://www.slideshare.net/WallerLab/decider01)
 
