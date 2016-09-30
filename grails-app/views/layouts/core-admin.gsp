@@ -8,6 +8,7 @@
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+	<link rel="shortcut icon" href="${assetPath(src: 'theDecider-bw-inverted-matchingSite.ico')}" type="image/x-icon">
 
   <!-- Use title if it's in the page YAML frontmatter -->
   <title>The Decider</title>
