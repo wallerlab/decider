@@ -19,7 +19,8 @@ script:
 - ./grailsw codenarc  
 - ./grailsw coveralls
 - ./grailsw prod war decider-0.1.war
--  curl -T decider-0.1.war -umpwaller:$BINTRAY_KEY https://api.bintray.com/content/wallerlab/release-candidates/decider/v0.1/decider-0.1.war
+# can't overwrite previous version, therefore an error is thrown. Need to find out how to have auto numbering.
+#-  curl -T decider-0.1.war -umpwaller:$BINTRAY_KEY https://api.bintray.com/content/wallerlab/release-candidates/decider/v0.1/decider-0.1.war
 after_success:
 - .utility/publish-javadoc.sh
 
