@@ -16,8 +16,8 @@ public interface GameTheoryManager {
 	 * Given a Map of payoffs and a directory in which to work, returns a
 	 * Matrix of strategies
 	 * 
-	 * @param Map<?,?> payoffs
-	 * @param File directory
+	 * @param payoffs
+	 * @param smiles
 	 * @return Matrix strategies
 	 */
 	//TODO: remove String when sure it's working because will be deleting input files

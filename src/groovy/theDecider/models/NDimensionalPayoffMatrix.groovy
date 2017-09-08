@@ -1,8 +1,5 @@
 package theDecider.models
 
-import java.util.ArrayList;
-import java.util.Map;
-
 /**
  * N-dimensional PayoffMatrix
  * 
@@ -11,13 +8,13 @@ import java.util.Map;
  */
 class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatrix{
 	
-	private List<?> playerStrategies;
+	private List<?> playerStrategies
 	
 	/**
 	 * Constructs an empty NDimensionalPayoffMatrix
 	 *
 	 */
-	public NDimensionalPayoffMatrix(){
+	NDimensionalPayoffMatrix(){
 		super()
 		this.playerStrategies = []
 	}
@@ -29,7 +26,7 @@ class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatri
 	 * @param playerStrategies
 	 * @param payoffs
 	 */
-	public NDimensionalPayoffMatrix(ArrayList<String> playerStrategies, 
+	NDimensionalPayoffMatrix(ArrayList<String> playerStrategies,
 		Map<ArrayList<Integer>,?> payoffs){
 		super(payoffs)
 		this.playerStrategies = playerStrategies
@@ -40,7 +37,7 @@ class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatri
 	 * 
 	 * @param playerStrategies
 	 */
-	public void addPlayerStrategy(String playerStrategy){
+	void addPlayerStrategy(String playerStrategy){
 		this.playerStrategies << playerStrategy
 	}
 	
@@ -50,7 +47,7 @@ class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatri
 	 * @param playerStrategy
 	 * @return containsPlayerStrategy
 	 */
-	public boolean containsPlayerStrategy(String playerStrategy){
+	boolean containsPlayerStrategy(String playerStrategy){
 		return this.playerStrategies.contains(playerStrategy)
 	}
 	
@@ -60,7 +57,7 @@ class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatri
 	 * @param playerStrategy
 	 * @return index
 	 */
-	public Integer indexOfPlayerStrategy(String playerStrategy){
+	Integer indexOfPlayerStrategy(String playerStrategy){
 		if(this.containsPlayerStrategy(playerStrategy)){
 			return this.playerStrategies.indexOf(playerStrategy)
 		}
@@ -73,7 +70,7 @@ class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatri
 	 * @param index
 	 * @return playerStrategy
 	 */
-	public String getStrategyAtIndex(int index){
+	String getStrategyAtIndex(int index){
 		return this.playerStrategies[index]
 	}
 	
@@ -82,7 +79,7 @@ class NDimensionalPayoffMatrix extends NDimensionalMatrix implements PayoffMatri
 	 * 
 	 * @return numPlayerStrategies
 	 */
-	public int getNumPlayerStrategies(){
+	int getNumPlayerStrategies(){
 		return this.playerStrategies.size()
 	}
 

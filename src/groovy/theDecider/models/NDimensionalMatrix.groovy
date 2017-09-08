@@ -1,12 +1,7 @@
 package theDecider.models
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.stream.Collectors
 import java.util.stream.Stream
 import javax.annotation.Resource
-
-import theDecider.models.Matrix
 
 /**
  * N-Dimensional matrix
@@ -17,10 +12,10 @@ import theDecider.models.Matrix
 class NDimensionalMatrix implements Matrix{
 	
 	@Resource
-	def nameMap;
+	def nameMap
 	
 	private Map<ArrayList<Integer>,?> matrix = [:]
-	private int dimensions;
+	private int dimensions
 	
 	/**
 	 * Constructs an empty NDimensionalMatrix

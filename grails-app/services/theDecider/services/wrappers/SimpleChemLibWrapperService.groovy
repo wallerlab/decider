@@ -1,18 +1,15 @@
 package theDecider.services.wrappers
 
-import org.openscience.cdk.ChemFile
 import org.openscience.cdk.atomtype.CDKAtomTypeMatcher
 import org.openscience.cdk.fingerprint.IBitFingerprint;
 import org.openscience.cdk.fingerprint.HybridizationFingerprinter
 import org.openscience.cdk.interfaces.IAtom
 import org.openscience.cdk.interfaces.IAtomContainer
 import org.openscience.cdk.interfaces.IAtomType
-import org.openscience.cdk.io.PDBReader;
 import org.openscience.cdk.smiles.SmilesParser
 import org.openscience.cdk.similarity.Tanimoto
 import org.openscience.cdk.silent.SilentChemObjectBuilder
 import org.openscience.cdk.tools.CDKHydrogenAdder
-import org.openscience.cdk.tools.manipulator.ChemFileManipulator;
 import org.openscience.cdk.tools.manipulator.AtomTypeManipulator
 
 /**
@@ -26,14 +23,14 @@ class SimpleChemLibWrapperService implements ChemLibWrapper {
 	/**
 	 * Calculates Tanimoto coefficient of given smiles strings
 	 * 
-	 * @param smilesString1
-	 * @param smilesString2
+	 * @param userMol
+	 * @param dbSmiles
 	 * @return tanimoto
 	 */
 	@Override
-	public Double getTanimoto(String smilesString1, String smilesString2) {
-		def userFingerprint = getBitFingerprint(smilesString1)
-		def dbFingerprint = getBitFingerprint(smilesString2)
+	public Double getTanimoto(String userMol, String dbSmiles) {
+		def userFingerprint = getBitFingerprint(userMol)
+		def dbFingerprint = getBitFingerprint(dbSmiles)
 		def tanimoto = Tanimoto.calculate(userFingerprint, dbFingerprint)
 		return tanimoto;
 	}
@@ -75,5 +72,4 @@ class SimpleChemLibWrapperService implements ChemLibWrapper {
 		return fingerprinter.getBitFingerprint(molecule)
 		
 	}
-
 }

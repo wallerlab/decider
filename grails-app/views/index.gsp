@@ -18,27 +18,6 @@
     		<div class="title">Draw your system here, then click the submit button.</div>
     	</div>	
     	<div class="box-content padded">
-		<script type="text/javascript" src="${request.contextPath}/js/marvin/marvin.js"></script>
-		<script type="text/javascript">
-			function exportMol() {
-				if (document.MSketch != null) {
-					if(document.MSketch.getAtomCount() != 0){
-						var s = document.MSketch.getMol('smiles');
-						document.MolForm.smiles.value = s;
-					}
-					else{
-						var s = null
-						}
-				} else {
-					alert("Cannot import molecule:\n"
-							+ "no JavaScript to Java communication in your browser.\n");
-				}
-			}
-
-			msketch_name = "MSketch";
-			msketch_begin("${request.contextPath}/js/marvin", 520, 445);
-			msketch_end();
-		</script>
 		<p>
 			<g:form name="MolForm" controller="main">
 				<g:hiddenField name="smiles" />
@@ -53,14 +32,7 @@
 		<div class="box text-center">
 		<div class="box-header">
     		<div class="title">here's a new box</div>
-    	</div>	
-<%--		<script>--%>
-<%--  $(function() {--%>
-<%--    $( "#slider" ).slider();--%>
-<%--  });--%>
-<%--  </script>--%>
-<%--  --%>
-<%--				<div id="slider"></div>--%>
+    	</div>
 	</div>
 	</div>
 </div>

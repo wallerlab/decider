@@ -1,11 +1,9 @@
 package theDecider.system
 
-import java.util.ArrayList
 
 import javax.annotation.Resource
 
-import theDecider.models.Strategy;
-import theDecider.models.MolecularSystem;
+import theDecider.models.Strategy
 
 /**
  * Looks in XML file for systems whose smiles strings are close to the user's input
@@ -16,7 +14,7 @@ import theDecider.models.MolecularSystem;
 class XMLQuerier implements Querier {
 
 	@Resource
-	def xmlFiles
+	xmlFiles
 
 	/**
 	 * Populates an ArrayList of DeciderSystems with their respective methods
@@ -39,7 +37,11 @@ class XMLQuerier implements Querier {
 								jacobSystem.ReferenceResult.ReferenceValue[0]['@Value'])
 
 						for(jacobMethod in jacobSystem.Methods.Method){
-							if(jacobMethod['@Basis'] != "CBS"){
+							if(jacobMethod['@Basis'] != "CBS" &&
+									//Filters out functions not used by
+									// gaussian or orca
+									new FunctionalsToTest().isTestableFunctional(
+											jacobMethod['@Hamiltonian'])){
 								Strategy method = populateMethod(jacobMethod, referenceResult);
 								method.system = system.name
 								method.tanimoto = system.tanimoto

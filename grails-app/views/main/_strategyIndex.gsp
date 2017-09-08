@@ -4,28 +4,46 @@
       </div>
       <div class="box-content padded text-center">
 	<script type="text/javascript" class="init">
-		$(document).ready(function() {
-			$('#example').DataTable({
-				"paging": false, 
-				"filter": false, 
-				"scrollY":"400px",
-				"scrollCollapse": true,
-				"order": [[2, "desc"]],
-				"columnDefs": [
-					{"render": function(data, type, row){
-						return data = data.substring(0,5);},
-					"targets": 2}]
-				});
-			$('#example tbody').on('click', 'tr', function () {
-		        var basisSet = $('td', this).eq(0).text();
-		        document.strategy.basisSet.value = basisSet;
-		        var functional = $('td', this).eq(1).text();
-		        document.strategy.functional.value = functional;
-		        $("#showSelection").html(
-					$("<p/>", {text: 'Your selection is currently:'})).append(
-					$("<p/>", {text: basisSet + ' ' + functional}))
-		    } );
-		});
+
+		function updateTable(data){
+            var strategies = document.getElementById("strategies");
+            for(var i = 0; i < data.wso.length; i++){
+				var tr = document.createElement("tr");
+            	var functional = document.createElement("td");
+            	var functionalTxt = document.createTextNode(data.wso[i].functional);
+                var basisSet = document.createElement("td");
+                var basisSetTxt = document.createTextNode(data.wso[i].basisSet);
+                var normWeight = document.createElement("td");
+                var normWeightTxt = document.createTextNode(data.wso[i].normWeight);
+                functional.appendChild(functionalTxt);
+                basisSet.appendChild(basisSetTxt);
+                normWeight.appendChild(normWeightTxt);
+                tr.appendChild(functional);
+                tr.appendChild(basisSet);
+                tr.appendChild(normWeight);
+                strategies.appendChild(tr);
+			}
+            $('#example').DataTable({
+                "paging": false,
+                "filter": false,
+                "scrollY":"400px",
+                "scrollCollapse": true,
+                "order": [[2, "desc"]],
+                "columnDefs": [
+                    {"render": function(data, type, row){
+                        return data = data.substring(0,5);},
+                        "targets": 2}]
+            });
+            $('#example tbody').on('click', 'tr', function () {
+                var basisSet = $('td', this).eq(0).text();
+                document.strategy.basisSet.value = basisSet;
+                var functional = $('td', this).eq(1).text();
+                document.strategy.functional.value = functional;
+                $("#showSelection").html(
+                    $("<p/>", {text: 'Your selection is currently:'})).append(
+                    $("<p/>", {text: basisSet + ' ' + functional}))
+            } );
+		}
 	</script>
 			
 	<div id=showSelection>
@@ -45,7 +63,7 @@
 				<th>Weight</th>
 			</tr>
 		</thead>
-		<tbody>
+		<tbody id="strategies">
 		<g:each var="strategy" in="${strategies }">
 			<tr>
 				<td>${strategy.functional }</td>

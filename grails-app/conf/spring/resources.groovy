@@ -1,12 +1,12 @@
 // Place your Spring DSL code here
 import theDecider.gameTheory.gambit.*
 import theDecider.gameTheory.payoffs.*
+import theDecider.services.wrappers.ObabelWrapperService
 import theDecider.system.SimpleComplexityCalculator;
 import theDecider.system.SimpleStrategyTransformer;
 import theDecider.system.SimpleMatchingSystemFinder;
 import theDecider.system.XMLQuerier;
 import theDecider.GenericCommandExecutor
-import grails.util.Environment
 
 beans = {
 	xmlns aop: "http://www.springframework.org/schema/aop"
@@ -34,7 +34,7 @@ beans = {
 	}
 	random(Random){
 	}
-	gambitPure(String, System.getenv("gambit_enumpure")){
+	gambitPure(String, System.getenv("gambit-enumpure")){
 	}
 	mainFolder(File, "decider-workspace"){
 	}

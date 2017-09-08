@@ -62,13 +62,10 @@ class SimpleComplexityCalculator implements ComplexityCalculator {
 		if(basisSet == "CBS"){
 			return 1.0
 		}
-		Double alpha = Integer.parseInt(params.alpha)/100
-		Double beta = Integer.parseInt(params.beta)/100
-		Double gamma = Integer.parseInt(params.gamma)/100
 		Double numDiff = getNumDiffuse(basisSet)
 		Double numPolar = getNumPolar(basisSet)
 		Double numZeta = getNumZeta(basisSet)
-		return (alpha*numZeta + beta*numPolar + gamma*numDiff)
+		return (numZeta + numPolar + numDiff)
 	}
 
 	/*

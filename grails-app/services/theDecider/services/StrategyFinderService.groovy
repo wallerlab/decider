@@ -1,12 +1,6 @@
 package theDecider.services
 
-import groovy.util.Node;
-
-import java.util.Map;
-
-import theDecider.BenchmarkSystem;
-import theDecider.models.*;
-import theDecider.system.JacobQuerier;
+import theDecider.models.*
 
 /**
  * Finds Nash Equilibrium QM methods for user-defined system
@@ -59,7 +53,7 @@ class StrategyFinderService {
 			equilibriumStrategies, strategies)
 		
 		return weightedStrategyOptions
-		
+
 	}
 		
 }

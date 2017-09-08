@@ -1,11 +1,5 @@
 package theDecider.gameTheory.gambit
 
-import java.io.File;
-import java.util.Map;
-
-import grails.util.Holders
-import theDecider.gameTheory.InputFileCreator
-import theDecider.gameTheory.OutputParser
 import theDecider.gameTheory.GameTheoryManager
 import theDecider.models.Matrix
 import theDecider.models.PayoffMatrix;
@@ -39,7 +33,7 @@ class GambitManager implements GameTheoryManager{
 	 */
 	@Override
 	public Matrix findNashEquilibria(
-		Map<String,PayoffMatrix> payoffs, String smiles){
+		Map<?,?> payoffs, String smiles){
 		
 		//create directory for input file
 		File directory = createDirectory(smiles)

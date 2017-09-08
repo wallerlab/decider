@@ -1,12 +1,9 @@
 package theDecider.system
 
-import java.util.List
-
 import theDecider.BenchmarkSystem
 import theDecider.models.MolecularSystem
 
 import javax.annotation.Resource
-import java.util.stream.Stream
 import java.util.stream.Collectors
 
 /**

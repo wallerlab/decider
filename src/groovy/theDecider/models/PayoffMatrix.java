@@ -11,14 +11,14 @@ public interface PayoffMatrix {
 	/**
 	 * Adds playerStrategy to PayoffMatrix
 	 * 
-	 * @param String playerStrategy
+	 * @param playerStrategy
 	 */
 	void addPlayerStrategy(String playerStrategy);
 
 	/**
 	 * Returns true if playerStrategy in matrix
 	 * 
-	 * @param String playerStrategy
+	 * @param playerStrategy
 	 * @return boolean containsPlayerStrategy
 	 */
 	boolean containsPlayerStrategy(String playerStrategy);
@@ -26,7 +26,7 @@ public interface PayoffMatrix {
 	/**
 	 * Returns index of playerStrategy
 	 * 
-	 * @param String playerStrategy
+	 * @param playerStrategy
 	 * @return Integer index
 	 */
 	Integer indexOfPlayerStrategy(String playerStrategy);

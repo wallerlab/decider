@@ -2,20 +2,17 @@ package theDecider.services.wrappers
 
 import grails.test.mixin.TestMixin
 import grails.test.mixin.support.GrailsUnitTestMixin
+import spock.lang.IgnoreRest
 import spock.lang.Specification
 import spock.lang.Unroll;
 
-import org.openscience.cdk.fingerprint.HybridizationFingerprinter
 import org.openscience.cdk.fingerprint.IBitFingerprint
-import org.openscience.cdk.protein.data.PDBPolymer
-import org.openscience.cdk.smiles.SmilesParser
-import org.openscience.cdk.silent.SilentChemObjectBuilder
 
 /**
  * See the API for {@link grails.test.mixin.support.GrailsUnitTestMixin} for usage instructions
  */
 @TestMixin(GrailsUnitTestMixin)
-class SimpleCDKWrapperSpec extends Specification {
+class SimpleChemLibWrapperSpec extends Specification {
 	
 	SimpleChemLibWrapperService scw = new SimpleChemLibWrapperService()
 

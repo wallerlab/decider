@@ -1,5 +1,6 @@
 package theDecider
 
+import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
 import grails.plugin.springsecurity.SpringSecurityUtils
 
@@ -8,6 +9,8 @@ class MainController {
 	
 	def strategyFinderService
 	def springSecurityService
+	def obabelWrapperService
+	def mainFolder
 	
 	@Secured(["permitAll()"])
     def index() {
@@ -21,10 +24,19 @@ class MainController {
 	}
 	
 	def getStrategies(){
-		if(params.smiles != ""){
-			def weightedStrategyOptions = strategyFinderService.findUserSystemNashStrategies(
-				params)
-			render(view: "index", model: [strategies: weightedStrategyOptions])
+		if(params.mrv != ""){
+			println params
+			def fileToConvert = new File(mainFolder, "test.mrv")
+			fileToConvert.write((String) params.mrv)
+			params.smiles = obabelWrapperService.run(fileToConvert)
+			println params.smiles
+
+			def weightedStrategyOptions = strategyFinderService.findUserSystemNashStrategies(params)
+			println weightedStrategyOptions
+			Map wso = ['wso': weightedStrategyOptions]
+			JSON.use('deep'){
+				render wso as JSON
+			}
 		}
 		else{
 			flash.error = message(code: 'default.empty.params.message')
