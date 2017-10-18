@@ -52,18 +52,18 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
-	test 'cglib:cglib-nodep:2.2.2'
-	compile group: 'org.openscience.cdk', name: 'cdk-core', version: '1.5.13'
-	compile group: 'org.openscience.cdk', name: 'cdk-standard', version: '1.5.13'
+	    test 'cglib:cglib-nodep:2.2.2'
+	    compile group: 'org.openscience.cdk', name: 'cdk-core', version: '1.5.13'
+	    compile group: 'org.openscience.cdk', name: 'cdk-standard', version: '1.5.13'
         compile group: 'org.openscience.cdk', name: 'cdk-interfaces', version: '1.5.13'
-       compile group: 'org.openscience.cdk', name: 'cdk-smiles', version: '1.5.13'
-       compile group: 'org.openscience.cdk', name: 'cdk-pdb', version: '1.5.13'
-       compile group: 'org.openscience.cdk', name: 'cdk-silent', version: '1.5.13'
-       compile group: 'org.openscience.cdk', name: 'cdk-io', version: '1.5.13'
-       compile group: 'org.openscience.cdk', name: 'cdk-fingerprint', version: '1.5.13'
-         build 'org.apache.httpcomponents:httpcore:4.3.2'
-                build 'org.apache.httpcomponents:httpclient:4.3.2'
-                build 'org.apache.httpcomponents:httpmime:4.3.3'
+        compile group: 'org.openscience.cdk', name: 'cdk-smiles', version: '1.5.13'
+        compile group: 'org.openscience.cdk', name: 'cdk-pdb', version: '1.5.13'
+        compile group: 'org.openscience.cdk', name: 'cdk-silent', version: '1.5.13'
+        compile group: 'org.openscience.cdk', name: 'cdk-io', version: '1.5.13'
+        compile group: 'org.openscience.cdk', name: 'cdk-fingerprint', version: '1.5.13'
+        build 'org.apache.httpcomponents:httpcore:4.3.2'
+        build 'org.apache.httpcomponents:httpclient:4.3.2'
+        build 'org.apache.httpcomponents:httpmime:4.3.3'
     }
 
     plugins {
@@ -75,14 +75,14 @@ grails.project.dependency.resolution = {
         compile ':cache:1.1.7'
 
    // Coveralls plugin
-                build(':coveralls:0.1.4', ':rest-client-builder:1.0.3') {
-                    export = false
-                }
-                test(':code-coverage:2.0.3-3') {
-                    export = false
-                }
+        build(':coveralls:0.1.4', ':rest-client-builder:1.0.3') {
+            export = false
+        }
+        test(':code-coverage:2.0.3-3') {
+            export = false
+        }
                 
-                build ":codenarc:0.25.2"
+        build ":codenarc:0.25.2"
 
 
         compile ":asset-pipeline:1.8.11"
@@ -95,11 +95,6 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.1"
 
-        // Uncomment these to enable additional asset-pipeline capabilities
-        //compile ":sass-asset-pipeline:1.7.4"
-        //compile ":less-asset-pipeline:1.7.0"
-        //compile ":coffee-asset-pipeline:1.7.0"
-        //compile ":handlebars-asset-pipeline:1.3.0.3"
     }
 }
 

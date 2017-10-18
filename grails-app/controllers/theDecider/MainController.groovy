@@ -22,7 +22,7 @@ class MainController {
 			redirect controller: "turingTest"
 		}
 	}
-	
+
 	def getStrategies(){
 		if(params.mrv != ""){
 			println params
@@ -32,9 +32,9 @@ class MainController {
 			println params.smiles
 
 			def weightedStrategyOptions = strategyFinderService.findUserSystemNashStrategies(params)
-			println weightedStrategyOptions
+			println weightedStrategyOptions.toString()
 			Map wso = ['wso': weightedStrategyOptions]
-			JSON.use('deep'){
+			JSON.use("deep"){
 				render wso as JSON
 			}
 		}

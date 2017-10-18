@@ -1,5 +1,7 @@
 package theDecider.gameTheory;
 
+import theDecider.models.PayoffMatrix;
+
 import java.io.File;
 import java.util.Map;
 
@@ -15,9 +17,9 @@ public interface InputFileCreator {
 	 * Creates a game theory software input file from given payoffs map in 
 	 * given directory
 	 * 
-	 * @param File directory
-	 * @param Map<?,?> payoffs
+	 * @param directory
+	 * @param payoffs
 	 */
-	void createFile(File directory, Map<?,?> payoffs);
+	void createFile(File directory, Map<String,PayoffMatrix> payoffs);
 	
 }

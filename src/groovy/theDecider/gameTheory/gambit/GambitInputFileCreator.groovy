@@ -1,7 +1,7 @@
 package theDecider.gameTheory.gambit
 
 import theDecider.gameTheory.InputFileCreator
-import theDecider.models.PayoffMatrix;
+import theDecider.models.PayoffMatrix
 
 /**
  * Creates input files for use with Gambit v14.1.0

@@ -1,6 +1,5 @@
 package theDecider.logging
 
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 import org.aspectj.lang.ProceedingJoinPoint
@@ -21,7 +20,7 @@ import org.springframework.stereotype.Component
 @Component
 class LoggingAspect {
 	
-	private static final log = LogFactory.getLog(this)
+	private static final log = LogFactory.getLog("decider")
 
 	/**
 	 * Logs around all public theDecider calls. Gives info about what's being called, with which arguments, 

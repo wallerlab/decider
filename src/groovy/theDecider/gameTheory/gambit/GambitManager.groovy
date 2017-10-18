@@ -2,7 +2,6 @@ package theDecider.gameTheory.gambit
 
 import theDecider.gameTheory.GameTheoryManager
 import theDecider.models.Matrix
-import theDecider.models.PayoffMatrix;
 
 import javax.annotation.Resource
 
@@ -32,39 +31,44 @@ class GambitManager implements GameTheoryManager{
 	 * @return strategies
 	 */
 	@Override
-	public Matrix findNashEquilibria(
-		Map<?,?> payoffs, String smiles){
+	public Matrix findNashEquilibria(Map<?,?> payoffs, String smiles){
 		
 		//create directory for input file
 		File directory = createDirectory(smiles)
 		
 		inputFileCreator.createFile(directory, payoffs)
-		println  "%%%%% gambitPure is: "
-		println gambitPure
 
-		println "%%%%% directory is: "
-		println directory
 		String gambitOutput = commandExecutor.execute(
 			gambitPure + " input.nfg", directory)
 		Matrix strategies = outputParser.parseOutput(
 			gambitOutput, payoffs)
+
+		//delete directory when finished
+		directory.deleteDir()
+
 		return strategies
 		
 	}
 
 	/*
 	 * Creates the working directory using the smiles string of the molecular
-	 * system
+	 * system, stripping it of anything non-alphabetical and non-numerical
 	 * 
 	 */
 	private File createDirectory(String smilesString){
-		
-		//TODO: create a better directory name
-		File directory = new File(mainFolder, smilesString)
+
+		String smilesStringMod = smilesString.replaceAll(/[^a-zA-Z0-9]+/,"")
+		File directory = new File(mainFolder, smilesStringMod)
 		if(directory.exists()){
-			//TODO: find the last number of folders with the same name
-			def num 
-			def folderName = smilesString + "_" + num
+			int lastNum = 0
+			mainFolder.eachDirMatch(~/${smilesStringMod}_\d*?/){ dir ->
+				int folderNum = Integer.parseInt(dir.name.split("_")[1].split(/\./)[0])
+				if(folderNum > lastNum){
+					lastNum = folderNum
+				}
+			}
+			lastNum++
+			def folderName = smilesStringMod + "_" + lastNum
 			directory = new File(mainFolder, folderName)
 		}
 		directory.mkdir()

@@ -127,8 +127,13 @@ log4j.main = {
 }
 
 log4j = {
+	appenders{
+		//TODO: uncomment this when it's working
+		//file name:'decider', file:'/var/log/thedecider.log'
+		file name:'decider', file:'log/thedecider.log'
+	}
 	root{
-		info()
+		info 'stdout','decider'
 	}
 }
 
