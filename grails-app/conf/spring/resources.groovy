@@ -1,7 +1,6 @@
 // Place your Spring DSL code here
 import theDecider.gameTheory.gambit.*
 import theDecider.gameTheory.payoffs.*
-import theDecider.services.wrappers.ObabelWrapperService
 import theDecider.system.SimpleComplexityCalculator;
 import theDecider.system.SimpleStrategyTransformer;
 import theDecider.system.SimpleMatchingSystemFinder;
@@ -34,7 +33,7 @@ beans = {
 	}
 	random(Random){
 	}
-	gambitPure(String, System.getenv("gambit-enumpure")){
+	gambitPure(String, System.getenv("gambitEnumpure")){
 	}
 	mainFolder(File, "decider-workspace"){
 	}
