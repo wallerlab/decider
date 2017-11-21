@@ -46,8 +46,8 @@ grails {
 	mail{
 		host = "smtp.gmail.com"
 		port = 465
-		username = "reactor.wallerlab@gmail.com"
-		password = "wlab2014"
+		username = "this will cause errors"
+		password = "this will cause errors"
 		props = ["mail.smtp.auth":"true",
 			  "mail.smtp.socketFactory.port":"465",
 			  "mail.smtp.socketFactory.class":"javax.net.ssl.SSLSocketFactory",
@@ -155,25 +155,3 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/**/favicon.ico':                ['permitAll'],
 	'/**/core-admin/**':              ['permitAll']
 ]
-
-/*//
-function getFormat() {
-    var sel = document.MolForm.molformat;
-    var v = document.MolForm.molformat[sel.selectedIndex].value;
-    return v;
-}
-
-function exportMolImage(format) {
-	if(document.MSketch != null) {
-		var s = document.MSketch.getMolImage("base64:"+format);
-		var img = document.getElementById('molImage');
-		img.src = "data:image/"+format+";base64,"+s;
-	} else {
-		alert("Cannot export molecule:\n"+
-		      "no JavaScript to Java communication in your browser.\n");
-	}
-}
-msketch_name = "MSketch";
-msketch_begin("../../..", 540, 480);
-msketch_end();
-*/

@@ -34,7 +34,7 @@ beans = {
 	}
 	random(Random){
 	}
-	gambitPure(String, System.getenv("gambit_enumpure")){
+	gambitPure(String, System.getenv("gambit-enumpure")){
 	}
 	mainFolder(File, "decider-workspace"){
 	}
