@@ -38,5 +38,5 @@ The NE for the decider is based on:
 
 # Contact us
 
-wallerlab@protonmail.com
+[contact](https://github.com/wallerlab/decider/issues)
 
